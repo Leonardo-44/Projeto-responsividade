@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DNC - Módulo de responsividade com CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"rel="stylesheet"/>
+    
+    <style>
+
+html{
+    font-family: Manrope;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+h3{
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+p{
+    font-size: 1rem;
+}
+
+button {
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    background-color: #F84646;
+    border: 0
+}
+
+#contact-button{
+    transition: opacity 0.5s ease-in-out, transform 0.5s 1.0s;
+}
+
+#contact-button:hover{
+    opacity: 0.9;
+    transform: scale(1.3);
+}
+
+#presentation-container{
+    padding: 2.5rem 10rem;
+    height: 40rem;
+    background-image: url(assets/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#presentation{
+    width: 37,5rem;
+}
+
+.container{
+    padding: 6.4rem 12rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+    
+#contact-title{
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+#contact-text{
+    margin-bottom: 2rem;
+}
+
+.background-gradient{
+    background: linear-gradient(180deg, white, rgb(216, 216, 216))
+}
+
+.background-red{
+    background-color: #F84646;
+    color: white;
+}
+
+#qualitis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 5rem;
+}
+
+.article-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.article-container > img{
+    object-fit: cover;
+}
+
+.article-container:nth-child(even){
+    margin-top: 5rem;
+    flex-direction: row-reverse;
+}
+
+.article-details{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    margin: 0 2.5rem 0 0;
+    justify-content: space-between;
+}
+
+.article-details > button{
+    font-size: 1rem;
+}
+
+.article-container:nth-child(even) > .article-details{
+    margin: 0 0 0 2.5rem;
+
+}
+
+.footer-list{
+    gap: 10rem;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+}
+
+.footer-list > ul > li{
+    list-style: none;
+}
+
+.footer-list > ul > li:last-child{
+    margin-bottom: 0;
+}
+
+.footer-list > ul > li:first-child{
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.footer-list > ul >li {
+    padding: 0.7rem;
+}
+
+.footer-copyright{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10em;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    margin-top: 5.5rem;
+}
+
+.grid-item > h3{
+    margin-top: 1rem;
+}
+
+.grid-item > p{
+    margin-top: 0.5rem;
+}
+
+.grid-container-companies{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.grid-item-companies{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem ;
+}
+
+.company-1{
+    grid-area: 3 / 1;
+}
+
+.company-2{
+    grid-area: 2 / 2 ;
+}
+
+.company-3{
+    grid-area: 3 / 2 ;
+}
+
+.company-4{
+    grid-area: 1 / 3 ;
+}
+
+.company-5{
+    grid-area: 2 / 3;
+}
+
+.company-6{
+    grid-area: 3 / 3 ;
+}
+
+.company-7{
+    grid-area: 2 / 4 ;
+}
+
+.company-8{
+    grid-area: 3 / 4 ; 
+}
+
+.company-9{
+    grid-area: 3 / 5 ;
+}
+
+.background-gray{
+    background-color: #F4F5F7;
+}
+
+/*MOBILE*/
+
+@media only screen and (max-width: 767px){
+    h1{
+        font-size: 2.5rem;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+
+    .grid-container{
+    grid-template-columns: 1fr;
+    }
+
+    .container{
+        justify-content: center;
+    }
+
+    #qualitis{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 1rem;
+    }
+
+    #qualitis > img {
+        transform: rotate(90deg);
+        margin: 2.5rem 0;
+    }
+
+    .article-container{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .article-container:nth-child(even){
+        flex-direction: column-reverse;
+    }
+
+    .article-details{
+        text-align: center;
+        align-items: normal;
+        margin: 2rem 0 0 0 ;
+    }
+
+    .article-container:nth-child(even) > .article-details{
+        margin: 2rem 0 0 0 ;
+        flex-direction: column-reverse;
+    }
+
+    .article-container:nth-child(even) > .article-details > h2{
+        margin-top: 2rem;
+        
+    }
+
+   .article-container > img{
+    width: 100%;
+    }
+
+    .grid-container-companies{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    }
+
+    .grid-item-companies{
+        height: 6rem;
+    }
+
+    .company-1{
+        grid-area: auto;
+    }
+    
+    .company-2{
+        grid-area: auto;
+    }
+
+    .company-3{
+        grid-area: auto;
+    }
+
+    .company-4{
+        grid-area: auto;
+    }
+
+    .company-5{
+        grid-area: auto;
+    }
+
+    .company-6{
+        grid-area: auto;
+    }
+
+    .company-7{
+        grid-area: auto;
+    }
+
+    .company-8{
+        grid-area: auto;
+    }
+
+    .company-9{
+        grid-area: auto;
+    }
+
+    .footer-list{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 1rem;
+    }
+
+    .footer-list > ul{
+        padding: 0;
+    }
+
+    .footer-copyright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+    }
+
+    .footer-list > ul > li:first-child{
+    margin-bottom: 0.5rem;
+    font-weight: 1000;
+}
+
+}
+
+/*TABLET*/
+
+@media only screen and (min-width: 768px) and (max-width:1023px) {
+    h1{
+        font-size: 3.5rem;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+
+    h3{
+        font-size: 1.5rem ;
+    }
+
+    .container{
+        padding: 5rem 4rem;
+    }
+
+    .grid-container{
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-container-companies{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+    }
+
+    .company-1{
+        grid-area: auto;
+    }
+    
+    .company-2{
+        grid-area: auto;
+    }
+
+    .company-3{
+        grid-area: auto;
+    }
+
+    .company-4{
+        grid-area: auto;
+    }
+
+    .company-5{
+        grid-area: auto;
+    }
+
+    .company-6{
+        grid-area: auto;
+    }
+
+    .company-7{
+        grid-area: auto;
+    }
+
+    .company-8{
+        grid-area: auto;
+    }
+
+    .company-9{
+        grid-area: auto;
+    }
+
+    #qualitis{
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+    }
+
+    .article-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+
+    .article-container > img{
+    width: 50%;
+    }
+
+    .footer-list{
+    gap: 1rem;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    }
+}
+
+
+/*LAPTOP*/
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    .footer-list{
+    gap: 5rem;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    }
+}
+
+
+
+    </style>
+
+</head>
+<body>
+    <main>
+        <!--Cabeçalho-->
+    <section id="presentation-container">
+        <div id="presentation">
+            <h1>Transformando em <br> produtos digitais</h1>
+            <p>Para que nossos clientes mantenham altos níveis de qualidade, <br> oferecemos serviços de gestão de projetos e análise de negócios <br> com nossa equipe especializada em diversos setores.</p>
+        </div>
+    </section>
+
+        <!--Qualidades-->
+    <section class="container">
+        <h2>Qualidade e Processos</h2>
+        <p>Para que nossos clientes mantenham altos níveis de qualidade, oferecemos serviços de Gestão de <br> Projetos, Análise de Negócios e Gestão de Testes com nossa equipe especializada e com experiência <br>  em diversos setores.</p>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="assets/documentos.png" alt="">
+                <h3>Análise de Documentos</h3>
+                <p>Ante vulputate ut at accumsan et. <br> Feugiat at tempus, est senectus <br> amet, elementum.</p>
+            </div>  
+             <div class="grid-item">
+                <img src="assets/estrela.png" alt="">
+                <h3>Aceitação e Avaliação</h3>
+                <p>Ante vulputate ut at accumsan et. <br> Feugiat at tempus, est senectus <br> amet, elementum.</p>
+            </div>
+             <div class="grid-item">
+                <img src="assets/coroa.png" alt="">
+                <h3>Regras de negócios</h3>
+                <p>Ante vulputate ut at accumsan et. <br> Feugiat at tempus, est senectus <br> amet, elementum.</p>
+            </div>
+             <div class="grid-item">
+                <img src="assets/grafico.png" alt="">
+                <h3>Diagramas de fluxo</h3>
+                <p>Ante vulputate ut at accumsan et. <br> Feugiat at tempus, est senectus <br> amet, elementum.</p>
+            </div>
+             <div class="grid-item">
+                <img src="assets/grafico-pizza.png" alt="">
+                <h3>Análise dos stakeholders</h3>
+                <p>Ante vulputate ut at accumsan et. <br> Feugiat at tempus, est senectus <br> amet, elementum.</p>
+            </div>
+             <div class="grid-item">
+                <img src="assets/prototipo.png" alt="">
+                <h3>Prototipagem</h3>
+                <p>Ante vulputate ut at accumsan et. <br> Feugiat at tempus, est senectus <br> amet, elementum.</p>
+            </div>
+        </div>
+    </section>
+
+        <!--Divulgação-->
+    <section class="container background-red">
+        <div>
+            <h2>O que oferecemos de melhor?</h2>
+            <p>Soluções suportadas por IoT</p>
+        </div>    
+            <div id="qualitis">
+                <div>Qualidade de <br> Software</div>
+                <img src="assets/arrow.png" alt="">
+                <div>Prever possíveis erros <br> na aplicação</div>
+                <img src="assets/arrow.png" alt="">
+                <div>Evitar  possíveis <br> riscos</div>
+                <img src="assets/arrow.png" alt="">
+                <div>Economia de tempo <br> e custo</div>
+            </div>
+        </div>
+    </section>
+
+        <!--Exemplos-->
+    <section class="container">
+        <article class="article-container">
+            <div class="article-details">
+                <div>
+                    <h2>Gestão de Qualidade <br> e Processos</h2>
+                    <p>Nossa equipe experiente; É composto por gerentes de projetos <br> especializados, com experiência em diversos setores e com <br> certificação PMP®. Estamos aqui para apoiar a gestão dos seus <br> projetos, fortalecer as áreas que você considera fracas e implementar <br> e desenvolver a metodologia PMI® com validade internacional na sua <br> empresa.</p>
+                </div>
+                <button id="contact-button">Ver mais</button>
+            </div>
+            <img src="assets/Illustration.jpg" alt="">
+        </article>
+             <article class="article-container">
+            <div class="article-details">
+                <div>
+                    <h2>Gerenciamento e <br> análise de testes</h2>
+                    <p>Para evitar erros de software nos projetos que consultamos, aplicamos <br> cuidadosamente os testes que realizamos em cada etapa do projeto, <br> seja manualmente ou com automação de testes. Nossa experiente <br> equipe de testes oferece às instituições uma experiência de cliente <br> segura, de alta qualidade e satisfatória do início ao fim, com serviços de <br> teste de software de alta qualidade.</p>
+                </div>
+                <button id="contact-button">Ver mais</button>
+            </div>
+            <img src="assets/tester.jpg" alt="">
+        </article>
+    </section>
+
+        <!--Empresas-->
+    <section class="container background-gray">
+        <h2>Nossas referências</h2>
+        <p>Nossos parceiros de negócios que confiam em nós e trabalham juntos</p>
+        <div class="grid-container-companies">
+            <div class="grid-item-companies company-1" >
+                <img src="assets/empresa1.png" alt="">
+            </div>
+            <div class="grid-item-companies company-2">
+                <img src="assets/empresa2.png" alt="">
+            </div>
+            <div class="grid-item-companies company-3">
+                <img src="assets/empresa3.png" alt="">
+            </div>
+            <div class="grid-item-companies company-4">
+                <img src="assets/empresa4.png" alt="">
+            </div>
+            <div class="grid-item-companies company-5">
+                <img src="assets/empresa5.png" alt="">
+            </div>
+            <div class="grid-item-companies company-6 ">
+                <img src="assets/empresa6.png" alt="">
+            </div>
+            <div class="grid-item-companies company-7 ">
+                <img src="assets/empresa7.png" alt="">
+            </div>
+            <div class="grid-item-companies company-8">
+                <img src="assets/empresa8.png" alt="">
+            </div>
+            <div class="grid-item-companies company-9">
+                <img src="assets/empresa9.png" alt="">
+            </div>
+            
+
+        </div>
+    </section>
+
+        <!--Contato-->
+    <section class="container background-gradient">
+        <div>
+            <img src="assets/user.png" alt="">
+            <h2 id="contact-title">Entre em Contato</h2>
+            <p id="contact-text">Contate-nos para obter informações detalhadas sobre nossas soluções, serviços e produtos.</p>
+            <button id="contact-button"> Enviar Mensagem </button>
+        </div>
+    </section>
+
+        <!--Sobre-->
+    <footer class="container background-red">
+        <section class="footer-list">
+
+            <ul>
+                <li>Soluções e Serviços</li>
+                <li>Desenvolvimento de software</li>
+                <li>Terceirização</li>
+                <li>Gestão de Qualidade e Processos</li>
+                <li>Consultoria</li>
+                <li>Soluções suportadas por IoT</li>
+            </ul>
+
+            <ul>
+                <li>Produtos</li>
+                <li>Sistema de gestão educacional</li>
+                <li>Sistema de Gestão de Capital Humano</li>
+                <li>Sistema de gerenciamento de conteúdo</li>
+            </ul>
+
+            <ul>
+                <li>Institucional</li>
+                <li>Sobre nós</li>
+                <li>Parceiros</li>
+            </ul>
+
+            <ul>
+                <li>Comunicação</li>
+                <li>Contato</li>
+                <li>Contato com especialistas</li>
+            </ul>
+        </section>
+
+        <section class=footer-copyright>
+            <div>© Copyright 2010-2021 - Can Çevik</div>
+            <div>
+                <img src="assets/medium.png" alt="">
+                <img src="assets/linkedin.png" alt="">
+                <img src="assets/twitter.png" alt="">
+                <img src="assets/instagram.png" alt="">
+                <img src="assets/facebook.png" alt="">
+            </div>
+        </section>
+    </footer>
+
+    </main>
+</body>
+</html>
