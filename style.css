@@ -4,8 +4,10 @@ html{
     box-sizing: border-box;
 }
 
-body{
-    margin: 0;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 h1{
@@ -50,8 +52,8 @@ button {
 }
 
 #presentation-container{
-    padding: 2.5rem 10rem;
-    height: 40rem;
+    padding: 2.5rem 7.5rem;
+    height: 100vh;
     background-image: url(assets/background.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -65,19 +67,16 @@ button {
 }
 
 .container{
-    padding: 6.4rem 12rem;
+    padding: 5rem;
     text-align: center;
-    display: flex;
-    flex-direction: column;
 }
     
 #contact-title{
-    margin-bottom: 1rem;
     margin-top: 0.5rem;
 }
 
 #contact-text{
-    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 .background-gradient{
@@ -235,11 +234,17 @@ button {
 
 @media only screen and (max-width: 767px){
     h1{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     h2{
         font-size: 1.5rem;
+    }
+
+    #presentation-container{
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
 
     .grid-container{
@@ -455,18 +460,6 @@ button {
 
     .footer-list{
     gap: 1rem;
-    display: flex;
-    text-align: left;
-    justify-content: center;
-    }
-}
-
-
-/*LAPTOP*/
-
-@media only screen and (min-width: 1024px) and (max-width: 1439px) {
-    .footer-list{
-    gap: 5rem;
     display: flex;
     text-align: left;
     justify-content: center;
