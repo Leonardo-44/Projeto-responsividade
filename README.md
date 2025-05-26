@@ -1,8 +1,11 @@
-# Projeto-responsividade
-RESPONSIVE BLOG PROJECT
+# Projeto Responsividade
 
-Responsividade para LapTop (min-width: 1024px) and (max-width: 1439px).
+Desenvolvi um projeto através do curso da DNC.
 
-Responsividade para Tablet (min-width: 768px) and (max-width:1023px).
+## Deploy do site: 
 
-Responsividade para Celular (max-width: 767px).
+https://responsive-blog-project.netlify.app/
+
+## Fonte usada:
+
+https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap
